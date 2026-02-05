@@ -182,3 +182,8 @@
 (1) Response Body
 
 " 로그인이 필요합니다. "
+
+## ERD
+<img width="362" height="154" alt="image" src="https://github.com/user-attachments/assets/fd861409-4c37-4098-9484-882f18ae09ed" />
+
+
