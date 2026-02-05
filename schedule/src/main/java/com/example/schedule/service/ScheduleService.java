@@ -22,9 +22,7 @@ public class ScheduleService {
                 request.getTitle(),
                 request.getContent(),
                 request.getUserId(),
-                request.getPassword(),
-                request.getCreatedAt(),
-                request.getModifiedAt()
+                request.getPassword()
 
         );
         Schedule savedSchedule = scheduleRepository.save(schedule); // 서비스를 세이브 하기 위해 세이브 생성

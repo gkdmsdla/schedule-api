@@ -13,31 +13,25 @@ import java.time.LocalDateTime;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 
 
-public class Schedule {
+public class Schedule extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(length = 50, nullable = false)
+    @Column(length = 30, nullable = false)
     private String title; // 제목
-    @Column(length = 500, nullable = false)
+    @Column(length = 200, nullable = false)
     private String content; // 내용
-    @Column(nullable = false, length = 20)
+    @Column(length = 20, nullable = false)
     private String userId; // 작성자
     @Column(nullable = false)
     private String password; // 비밀번호
-    @Column(nullable = false)
-    private LocalDateTime createdAt;
-    @Column(nullable = false)
-    private LocalDateTime modifiedAt;
 
-    public Schedule(String title, String content, String userId, String password, LocalDateTime createdAt, LocalDateTime modifiedAt) {
+    public Schedule(String title, String content, String userId, String password) {
         this.title = title;
         this.content = content;
         this.userId = userId;
         this.password = password;
-        this.createdAt = createdAt;
-        this.modifiedAt = modifiedAt;
     }
     public void update(String title, String content, String password) {
         this.title = title;
